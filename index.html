@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Splitter</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <div class="container">
+        <h1>Image Splitter</h1>
+        <canvas id="previewCanvas" width="200" height="200"></canvas>
+        <div id="result"></div>
+
+        <div class="notice">
+            <input type="file" id="upload" accept="image/*"><br>
+            <label for="columns">Colunas: </label>
+            <input type="number" id="columns" min="1" value="2" oninput="updatePreview()">
+            <label for="rows">Linhas: </label>
+            <input type="number" id="rows" min="1" value="2" oninput="updatePreview()">
+            <br>
+            <button onclick="splitImage()">Split Image</button>
+
+            <p>Se o arquivo estiver em PDF, <a href="https://www.ilovepdf.com/pt/pdf_para_jpg" target="_blank">converta ele em imagem antes</a>.</p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
